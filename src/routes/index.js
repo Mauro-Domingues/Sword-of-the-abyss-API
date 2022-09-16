@@ -1,7 +1,8 @@
 const express = require("express")
 const router = express.Router()
+const cors = require('cors')
 
-router.get("/", function (req, res, next) {
+router.get("/", cors(), function (req, res, next) {
   try{
   res.status(200).send("Integração com o Banco de Dados estabelecida")
   }catch(error){
