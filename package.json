@@ -1,10 +1,10 @@
 {
-  "name": "sword-of-the-abyss",
+  "name": "sword-of-the-abyss-API",
   "version": "1.0.0",
   "description": "deploy: https://mauro-domingues.github.io/Sword-of-the-abyss/",
   "main": "script.js",
   "bin": {
-    "sword-of-the-abyss": "bin/server.js"
+    "sword-of-the-abyss-API": "bin/server.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

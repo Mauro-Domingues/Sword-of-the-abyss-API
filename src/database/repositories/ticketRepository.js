@@ -23,6 +23,19 @@ class TicketRepository {
     return ticket
   }
 
+  async create(ticketData){
+    const conn = await db.connectToMySql()
+    const query = "INSERT INTO ticket (title, data, type, description, contact) VALUES (?, ?, ?, ?, ?)"
+    const ticket = await conn.query(query, [
+      ticketData.title,
+      ticketData.data,
+      ticketData.type,
+      ticketData.description,
+      ticketData.contact
+    ])
+    return ticket
+  }
+
   async update(id, ticketData){
     const conn = await db.connectToMySql()
     const query = "UPDATE ticket SET status = ? WHERE id = ?"

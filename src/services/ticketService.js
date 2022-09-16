@@ -18,6 +18,10 @@ class TicketService {
     return this.repository.findByTag(type)
   }
 
+  async createTicket(ticket){
+    return this.repository.create(ticket)
+  }
+
   async updateTicket(id, ticket){
     return this.repository.update(id, ticket)
   }
