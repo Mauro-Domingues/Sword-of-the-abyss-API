@@ -1,5 +1,5 @@
 {
-  "name": "sword-of-the-abyss-API",
+  "name": "sword-of-the-abyss-api",
   "version": "1.0.0",
   "description": "deploy: https://mauro-domingues.github.io/Sword-of-the-abyss/",
   "main": "script.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mauro-Domingues/Sword-of-the-abyss.git"
+    "url": "git+https://github.com/Mauro-Domingues/Sword-of-abyss-API.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mauro-Domingues/Sword-of-the-abyss/issues"
+    "url": "https://github.com/Mauro-Domingues/Sword-of-abyss-API/issues"
   },
-  "homepage": "https://github.com/Mauro-Domingues/Sword-of-the-abyss#readme",
+  "homepage": "https://github.com/Mauro-Domingues/Sword-of-abyss-API#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
