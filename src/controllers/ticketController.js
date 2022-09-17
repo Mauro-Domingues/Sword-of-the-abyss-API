@@ -22,6 +22,17 @@ exports.getById = async (req, res, next) => {
   }
 }
 
+exports.getByStatus = async (req, res, next) => {
+  try{
+  const payload = await new TicketService().getTicketByStatus(req.params.status)
+  res.status(200).send(payload)
+  }catch(error){
+  res.status(400).send({
+    message: error.message
+  })
+  }
+}
+
 exports.getByTag = async (req, res, next) => {
   try{
   const payload = await new TicketService().getTicketByTag(req.params.type)
