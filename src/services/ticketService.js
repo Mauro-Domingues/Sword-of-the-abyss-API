@@ -14,6 +14,10 @@ class TicketService {
     return this.repository.findById(id)
   }
 
+  async getTicketByStatus(status){
+    return this.repository.findByStatus(status)
+  }
+
   async getTicketByTag(type){
     return this.repository.findByTag(type)
   }

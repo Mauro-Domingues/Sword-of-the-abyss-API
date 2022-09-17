@@ -16,6 +16,13 @@ class TicketRepository {
     return ticket
   }
 
+  async findByStatus(status){
+    const conn = await db.connectToMySql()
+    const query = "SELECT * FROM ticket WHERE status = ?"
+    const [ticket] = await conn.query(query, [status])
+    return ticket
+  }
+
   async findByTag(type){
     const conn = await db.connectToMySql()
     const query = "SELECT * FROM ticket WHERE type = ?"
