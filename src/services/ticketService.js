@@ -26,8 +26,8 @@ class TicketService {
     return this.repository.create(ticket)
   }
 
-  async updateTicket(id, ticket){
-    return this.repository.update(id, ticket)
+  async updateTicket(id, status){
+    return this.repository.update(id, status)
   }
 
   async deleteTicket(id){
