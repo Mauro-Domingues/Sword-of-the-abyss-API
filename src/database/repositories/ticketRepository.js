@@ -5,7 +5,7 @@ class TicketRepository {
   async findAll() {
     const conn = await db.connectToMySql()
     const query = "SELECT * FROM ticket"
-    const tickets = await conn.query(query)
+    const [tickets] = await conn.query(query)
     return tickets
   }
 
