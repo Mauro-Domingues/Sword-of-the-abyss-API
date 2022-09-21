@@ -14,11 +14,11 @@ router.get("/", function (req, res, next) {
     }
     res.status(200).send("Interação com o Banco de Dados")
     next()
-    }catch(error){
-      res.status(400).send({
-        message: error.message
-      })
-    }
+  }catch(error){
+    res.status(400).send({
+      message: error.message
+    })
+  }
 })
 
 module.exports = router
