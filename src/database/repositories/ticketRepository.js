@@ -57,6 +57,12 @@ class TicketRepository {
     const conn = await db.connectToMySql()
     const query = "DELETE FROM ticket WHERE id = ?"
     const ticket = await conn.query(query, [id])
+
+  }
+  async truncate(){
+    const conn = await db.connectToMySql()
+    const query = "TRUNCATE ticket"
+    const ticket = await conn.query(query)
   }
 
 }

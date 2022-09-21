@@ -9,5 +9,6 @@ router.get('/type/:type', ticketController.getByTag)
 router.post('/', ticketController.post)
 router.put('/:id', ticketController.put)
 router.delete('/:id', ticketController.delete)
+router.delete('/', ticketController.truncate)
 
 module.exports = router
