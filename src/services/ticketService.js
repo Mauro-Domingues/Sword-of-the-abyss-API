@@ -2,7 +2,7 @@ const TicketRepository = require('../database/repositories/ticketRepository.js')
 
 class TicketService {
 
-  constructor() {
+  constructor(){
     this.repository = new TicketRepository()
   }
 
