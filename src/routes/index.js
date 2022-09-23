@@ -1,12 +1,5 @@
 const express = require("express")
-const cors = require('cors')
 const router = express.Router()
-
-router.use(cors({
-  Origin: '*',
-  Header: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-  Methods: 'GET, PUT, POST, DELETE, TRUNCATE'
-}))
 
 router.get("/", (req, res, next) => {
   try{
