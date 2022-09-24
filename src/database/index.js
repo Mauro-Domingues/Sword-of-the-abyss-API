@@ -4,10 +4,10 @@ const connectToMySql = async () => {
     if (global.connection && global.connection.state !== 'disconnected')
         return global.connection
     const config = {
-        host: "sql.freedb.tech",
-        user: "freedb_sota_admin",
-        password: "Dv?YDGG8sg8a%vR",
-        database: "freedb_report_suggestion_db"
+        host: "localhost",
+        user: "root",
+        password: "RI1097032085co",
+        database: "report_suggestion_db"
     }
     const connection = await mysql.createConnection(config)
     global.connection = connection
