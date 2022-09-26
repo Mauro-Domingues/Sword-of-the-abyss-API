@@ -6,10 +6,9 @@ const ticketRoute = require('./routes/ticketRoute')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+  req.header({'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'})
   if (req.method === 'OPTIONS'){
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, TRUNCATE')
+    res.header({'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, TRUNCATE'})
   }next()
 })
 app.use('/', index)
