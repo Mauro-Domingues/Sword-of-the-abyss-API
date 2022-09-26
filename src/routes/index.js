@@ -1,13 +1,12 @@
 const express = require("express")
+const cors = require("cors")
 const router = express.Router()
 
-router.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://mauro-domingues.github.io/Sword-of-the-abyss, https://mauro-domingues.github.io/Sword-of-the-abyss-admin')
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
-  if (req.method === 'OPTIONS'){
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, TRUNCATE')
-  }next()
-})
+router.use(cors({
+  Origin: 'https://mauro-domingues.github.io/Sword-of-the-abyss, https://mauro-domingues.github.io/Sword-of-the-abyss-admin',
+  Header: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+  Methods: 'GET, PUT, POST, DELETE, TRUNCATE'
+}))
 
 router.get("/", (req, res, next) => {
   try{
