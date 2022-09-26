@@ -1,8 +1,9 @@
 const mysql = require("mysql2/promise")
 
 const connectToMySql = async () => {
-    if (global.connection && global.connection.state !== 'disconnected')
+    if (global.connection && global.connection.state !== 'disconnected'){
         return global.connection
+    }
     const config = {
         host: "db4free.net",
         user: "sota_admin",

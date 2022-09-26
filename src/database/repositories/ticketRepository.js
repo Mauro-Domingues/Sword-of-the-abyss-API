@@ -59,6 +59,7 @@ class TicketRepository {
     const ticket = await conn.query(query, [id])
 
   }
+  
   async truncate(){
     const conn = await db.connectToMySql()
     const query = "TRUNCATE ticket"
