@@ -6,7 +6,8 @@ const ticketRoute = require('./routes/ticketRoute')
 const CorsOptions = {
   origin: '*',
   allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-  methods: 'GET, PUT, POST, DELETE, TRUNCATE'
+  methods: 'GET, PUT, POST, DELETE, TRUNCATE',
+  preflightContinue: false
 }
 
 app.use(express.json())
