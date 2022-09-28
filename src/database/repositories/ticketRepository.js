@@ -65,6 +65,23 @@ class TicketRepository {
     const ticket = await conn.query(query)
   }
 
+  async check(userData){
+    const conn = await db.connectToMySql()
+    const query = "SELECT * FROM users"
+    const [users] = await conn.query(query)
+    let auth = ["Denied"]
+    users.map(() => {
+      for(let i = 0; i < users.length; i++){
+        if(userData.user === users[i].user){
+          if(userData.password === users[i].password){
+            auth = ["Ok"]
+          }
+        }
+      }
+    })
+    return auth
+  }
+
 }
 
 module.exports = TicketRepository
