@@ -22,9 +22,6 @@ class UserRepository {
         return user
       })
     })
-
-    
-    
   }
 
   async delete(id){
