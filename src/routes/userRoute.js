@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
 const checkAdmin = require('../middlewares/checkAdmin')
-const check = require('../middlewares/checkUser')
 
 router.get('/', checkAdmin, userController.get)
 router.post('/', checkAdmin, userController.post)
