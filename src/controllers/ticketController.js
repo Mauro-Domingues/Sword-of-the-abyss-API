@@ -87,25 +87,3 @@ exports.delete = async (req, res, next) => {
     })
   }
 }
-
-exports.truncate = async (req, res, next) => {
-  try{
-    const payload = await new TicketService().truncateTable()
-    res.status(200).send(payload)
-  }catch(error){
-    res.status(400).send({
-      message: error.message
-    })
-  }
-}
-
-exports.check = async (req, res, next) => {
-  try{
-    const payload = await new TicketService().checkUser(req.body)
-    res.status(200).send(payload)
-  }catch(error){
-    res.status(401).send({
-      message: error.message
-    })
-  }
-}

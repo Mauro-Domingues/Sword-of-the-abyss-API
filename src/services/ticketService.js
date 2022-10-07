@@ -34,14 +34,6 @@ class TicketService {
     return this.repository.delete(id)
   }
 
-  async truncateTable(){
-    return this.repository.truncate()
-  }
-  
-  async checkUser(auth){
-    return this.repository.check(auth)
-  }
-
 }
 
 module.exports = TicketService
