@@ -22,8 +22,8 @@ class UserService {
     return this.repository.check(auth)
   }
 
-  async checkAdmin(auth){
-    return this.repository.check(auth)
+  async checkAdmin(adminAuth){
+    return this.repository.checkAdmin(adminAuth)
   }
 
 }
