@@ -76,6 +76,12 @@ class UserRepository {
     return adminAuth
   }
 
+  async truncate(){
+    const conn = await db.connectToMySql()
+    const query = "TRUNCATE users"
+    const user = await conn.query(query)
+  }
+
 }
 
 module.exports = UserRepository

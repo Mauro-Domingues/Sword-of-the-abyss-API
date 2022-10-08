@@ -26,6 +26,10 @@ class UserService {
     return this.repository.checkAdmin(adminAuth)
   }
 
+  async truncateUsers(){
+    return this.repository.truncate()
+  }
+
 }
 
 module.exports = UserService
