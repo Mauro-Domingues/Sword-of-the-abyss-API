@@ -19,6 +19,6 @@
 <img src="./images/npm-start.png" width="100%">
 <h4>- Esse será o resultado:</h4>
 <img src="./images/npm-result.png" width="100%">
-<h4>- Por fim abra alguma aplicação de requisições, recomendo https://www.postman.com/ ou a própria extensão https://www.thunderclient.com/ do vs. code. Usando a url http://localhost:3000/user selecione o método POST com o seguinte corpo json:</h4>
+<h4>- Por fim abra alguma aplicação de requisições, recomendo https://www.postman.com/ ou a própria extensão https://www.thunderclient.com/ do vs. code. Usando a url http://localhost:3000/user/ selecione o método POST com o seguinte corpo json:</h4>
 <img src="./images/criar-admin.png" width="100%">
 <h4>Agora o banco de usuários está pronto novamente para uso.</h4>
