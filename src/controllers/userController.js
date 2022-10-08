@@ -54,14 +54,3 @@ exports.checkAdmin = async (req, res, next) => {
     })
   }
 }
-
-exports.truncate = async (req, res, next) => {
-  try{
-    const payload = await new UserService().truncateUsers()
-    res.status(204).send(payload)
-  }catch(error){
-    res.status(404).send({
-      message: error.message
-    })
-  }
-}
