@@ -13,7 +13,7 @@
 <img src="./images/truncate-db.png" width="100%">
 <h4>- Se der certo esse será o resultado:</h4>
 <img src="./images/truncate-successful.png" width="100%">
-<h4>- Depois vá para [Rotas de usuário](src/routes/userRoute.js), comente a linha 8 e descomente a linha 9</h4>
+<h4>- Depois vá para [Rotas de usuário](src\routes\userRoute.js), comente a linha 8 e descomente a linha 9</h4>
 <img src="./images/comment.png" width="100%">
 <h4>- Agora abra o cmd com CTRL + J e digite o comando "npm start"</h4>
 <img src="./images/npm-start.png" width="100%">
