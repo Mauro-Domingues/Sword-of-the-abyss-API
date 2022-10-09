@@ -14,13 +14,10 @@ class UserRepository {
 
   async create(userData) {
     const conn = await db.connectToMySql()
-    const query = "INSERT INTO users (email, password) VALUES (?, ?)"
-    bcrypt.hash(userData.email, 10, async (err, res) => {
-      const email = res
-      bcrypt.hash(userData.password, 10, async (err, res) => {
-        const user = await conn.query(query, [email, res])
-        return user
-      })
+    const query = "INSERT INTO users (name, password) VALUES (?, ?)"
+    bcrypt.hash(userData.password, 10, async (err, res) => {
+      const user = await conn.query(query, [userData.name, res])
+      return user
     })
   }
 
@@ -36,13 +33,12 @@ class UserRepository {
     const [users] = await conn.query(query)
     let auth = ["Falha na autenticação"]
     for (let i = 0; i < users.length; i++) {
-      let email = await bcrypt.compare(userData.email, users[i].email)
-      if (email) {
+      if (userData.name === users[i].name) {
         let password = await bcrypt.compare(userData.password, users[i].password)
         if (password) {
           auth = [
             jwt.sign({
-              user: users[i].email,
+              user: users[i].name,
               password: users[i].password
             }, process.env.SECRET, {
               expiresIn: "1h"
@@ -59,13 +55,12 @@ class UserRepository {
     const query = "SELECT * FROM users"
     const [users] = await conn.query(query)
     let adminAuth = ["Falha na autenticação"]
-    let email = await bcrypt.compare(userData.email, users[0].email)
-    if (email) {
+    if (userData.name, users[0].name) {
       let password = await bcrypt.compare(userData.password, users[0].password)
       if (password) {
         adminAuth = [
           jwt.sign({
-            user: users[0].email,
+            user: users[0].name,
             password: users[0].password
           }, process.env.ADMIN_SECRET, {
             expiresIn: "1h"

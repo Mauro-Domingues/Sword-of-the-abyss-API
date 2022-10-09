@@ -6,7 +6,7 @@
 <h3>Criar tabela de tickets:</h3>
 <h4>CREATE TABLE `report_ticket_db`.`ticket` (`id` INT NOT NULL AUTO_INCREMENT , `title` CHAR(100) NOT NULL , `date` DATE NOT NULL , `type` CHAR(100) NOT NULL , `status` CHAR(100) NOT NULL DEFAULT 'Pendente' , `description` TEXT NOT NULL , `contact` CHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;</h4>
 <h3>Criar tabela de usuários:</h3>
-<h4>CREATE TABLE `report_ticket_db`.`users` (`id` INT NOT NULL AUTO_INCREMENT , `email` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`), UNIQUE (`email`)) ENGINE = InnoDB;</h4>
+<h4>CREATE TABLE `report_ticket_db`.`users` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`), UNIQUE (`name`)) ENGINE = InnoDB;</h4>
 
 <h2>Como criar o usuário raíz?</h2>
 <h4>- Primeiro execute o comando "TRUNCATE users" direto no seu banco de dados SQL</h4>
